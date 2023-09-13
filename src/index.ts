@@ -1,13 +1,6 @@
-import { slowFetcher } from "./fetcher";
+import { cli } from "./cli.ts";
 
-export function greet(name: string) {
-	return `Hello ${name}!`;
-}
-
-export async function asyncGreet(name: string) {
-	return Promise.resolve(`Hello ${name}!`);
-}
-
-export async function runSlowFetcher() {
-	return await slowFetcher()
-}
+cli([
+	// put arguments to test cli with here
+	'joke'
+]);
