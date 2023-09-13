@@ -1,0 +1,29 @@
+{
+  "name": "node-20-typescript",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "ts-node --esm src/index.ts",
+    "test": "NODE_NO_WARNINGS=1 ava"
+  },
+  "devDependencies": {
+    "@types/node": "^18.17.15",
+    "ava": "^5.3.1",
+    "esmock": "^2.5.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "ky": "^1.0.1",
+    "radash": "^11.0.0"
+  },
+  "ava": {
+    "extensions": {
+      "ts": "module"
+    },
+    "nodeArguments": [
+      "--loader=ts-node/esm",
+      "--loader=esmock"
+    ]
+  }
+}
