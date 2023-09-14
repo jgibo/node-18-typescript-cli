@@ -7,6 +7,6 @@ type JokeResponse = {
 };
 
 export async function fetchJokeOfTheDay() {
-	const data = await ky.get("https://icanhazdadjoke.com/").json() as JokeResponse;
+	const data = await ky.get(process.env.JOKE_URL!).json() as JokeResponse;
 	return data;
 }
